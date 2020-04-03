@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 
 def create_app(test_config=None):
-  # create and configure the app2
+  # create and configure the app2288
   app = Flask(__name__)
   CORS(app)
 
