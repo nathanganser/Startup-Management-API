@@ -18,22 +18,28 @@ from datetime import datetime
 from sqlalchemy import extract
 from dateutil import parser
 
+import os
+from flask import Flask, request, abort, jsonify
+from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
+
 
 from forms import *
 from flask_migrate import Migrate
+from models import Project, setup_db, Team
 
 # ------------------------f----------------------------------------------------#
 # App Config.
 # ----------------------------------------------------------------------------#
 
 app = Flask(__name__)
+setup_db(app)
+
 moment = Moment(app)
 app.config.from_object('config')
 db = SQLAlchemy(app)
+
 migrate = Migrate(app, db)
-
-
-
 
 
 # ----------------------------------------------------------------------------#
