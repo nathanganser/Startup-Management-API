@@ -2,12 +2,20 @@
 Udacity's Capstone project
 
 ## Description
-Modelling a startup team. With employees that work on projects. I am creating an API to streamline the process
+Modelling a startup team. With employees that work on projects. 
+I am creating an API to streamline the process of creating 
+projects and assigning team members to projects.
 
 ## Milestones 
  - [x] Connect to Github
- - [ ] Get a basic app running locally (with DB, / get request)
- - [ ] Make it running on AWS 
+ - [x] Get a basic app running locally (with DB, / get request)
+ - [x] Add migrations
+ - [ ] Make it running on AWS
+ - [ ] Add API backbone
+ - [ ] Add Auth
+ - [ ] Build API with jsonify
+ - [ ] Add error handling and flash
+ - [ ] Integrate with Fyyur frontend
 
 ## Models
 
