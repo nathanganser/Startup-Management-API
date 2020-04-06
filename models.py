@@ -42,6 +42,18 @@ class Project(db.Model):
     def update(self):
         db.session.commit()
 
+    def show(self):
+        teams = Team.query.filter_by(project_id=self.id).all()
+        team_members = []
+        for member in teams:
+            team_members.append(member.member_id)
+        return {
+            'id': self.id,
+            'name': self.name,
+            'deadline': self.deadline,
+            'team': team_members
+        }
+
 
 class Member(db.Model):
     __tablename__ = 'member'
