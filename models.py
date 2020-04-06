@@ -31,6 +31,17 @@ class Project(db.Model):
     deadline = db.Column(db.String, nullable=False)
     team = db.relationship('Team')
 
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+
 
 class Member(db.Model):
     __tablename__ = 'member'
@@ -38,6 +49,17 @@ class Member(db.Model):
     name = db.Column(db.String)
     role = db.Column(db.String)
     team = db.relationship('Team')
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
 
 
 class Team(db.Model):
@@ -47,3 +69,14 @@ class Team(db.Model):
     member_id = db.Column(db.Integer, db.ForeignKey('member.id'), primary_key=False)
     member = db.relationship('Member')
     project = db.relationship('Project')
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
