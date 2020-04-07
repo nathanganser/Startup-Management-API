@@ -2,10 +2,14 @@ import os
 from sqlalchemy import Column, String, Integer
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+import pymysql
 import json
+from .config import database_path
 
-database_name = "startup"
-database_path = "postgres://{}/{}".format('localhost:5432', database_name)
+# database_path is imported from config & hidden for security reasons.
+
+
+
 
 db = SQLAlchemy()
 
