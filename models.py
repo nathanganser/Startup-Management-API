@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 import pymysql
 import json
-from .config import database_path
+from config import database_path
 
 # database_path is imported from config & hidden for security reasons.
 
