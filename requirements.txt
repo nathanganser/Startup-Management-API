@@ -58,7 +58,7 @@ pluggy==0.13.1
 postgres==3.0.0
 psycopg2-binary==2.8.4
 public==2019.4.13
-py==1.8.1
+py==1.10.0
 pyasn1==0.4.8
 pycodestyle==2.5.0
 pycparser==2.20
